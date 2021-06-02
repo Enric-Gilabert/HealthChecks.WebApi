@@ -36,6 +36,8 @@ namespace HealthChecks.WebApi
         {
             services.AddControllers();
             services.AddHealthChecks()
+
+
             .AddDbContextCheck<DataContext>()
            .AddUrlGroup(new Uri("https://www.codewithmukesh.com"), name: "CodewithMukesh")
            .AddCheck<CustomHealthCheck>(name: "New Custom Check");
